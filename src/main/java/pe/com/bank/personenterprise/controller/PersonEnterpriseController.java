@@ -25,31 +25,31 @@ public class PersonEnterpriseController {
 	    
 	    private static final Logger log = LoggerFactory.getLogger(PersonEnterpriseController.class);
 	    
-	    @PostMapping("/personEnterprises")
+	    @PostMapping
 	    public Mono<PersonEnterprise> addPersonEnterprise(@RequestBody PersonEnterprise personEnterprise){
 	    	log.info("addPersonEnterprise");
 	    	return personEnterpriseService.addPersonEnterprise(personEnterprise);
 	    }
 	    
-	    @GetMapping("/personEnterprises")
+	    @GetMapping
 	    public Flux<PersonEnterprise> getPersonEnterprises() {
 	    	log.info("getPersonEnterprises");
 	        return personEnterpriseService.getPersonEnterprises();
 	    }
 	    
-	    @GetMapping("/personEnterprises/{id}")
+	    @GetMapping("/{id}")
 	    public Mono<PersonEnterprise> getPersonEnterpriseById(@PathVariable String id){
 	    	log.info("getPersonEnterpriseById");
 	    	return personEnterpriseService.getPersonEnterpriseById(id);
 	    }
 	    
-	    @PutMapping("/personEnterprises/{id}")
+	    @PutMapping("/{id}")
 	    public Mono<PersonEnterprise> updatePersonEnterprise(@RequestBody PersonEnterprise personEnterpriseUpdate, @PathVariable String id){
 	    	log.info("updatePersonEnterprise");
 	    	return personEnterpriseService.updatePersonEnterprise(personEnterpriseUpdate, id);
 	    }
 	    
-	    @DeleteMapping("/personEnterprises/{id}")
+	    @DeleteMapping("/{id}")
 	    public Mono<Void> deleteByPersonEnterpriseId(@PathVariable String id){
 	    	log.info("deleteByPersonEnterpriseId");
 	    	return personEnterpriseService.deletePersonEnterpriseById(id);

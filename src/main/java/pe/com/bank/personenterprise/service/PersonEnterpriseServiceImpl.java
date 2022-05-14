@@ -2,12 +2,16 @@ package pe.com.bank.personenterprise.service;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Service;
 
+import lombok.AllArgsConstructor;
 import pe.com.bank.personenterprise.entity.PersonEnterprise;
 import pe.com.bank.personenterprise.repository.PersonEnterpriseRepository;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+@AllArgsConstructor
+@Service
 public class PersonEnterpriseServiceImpl implements PersonEnterpriseService{
 	
 	PersonEnterpriseRepository personEnterpriseRepository;

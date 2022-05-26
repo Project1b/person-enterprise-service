@@ -11,6 +11,5 @@ public interface PersonEnterpriseService {
 	 public Mono<PersonEnterprise> getPersonEnterpriseById(String id);
 	 public Mono<PersonEnterprise> updatePersonEnterprise(PersonEnterprise personEnterprise, String id);
 	 public Mono<Void> deletePersonEnterpriseById(String id);
-	 //public Mono <PersonEnterprise> getCustomersByPersonId(String id);
 
 }
